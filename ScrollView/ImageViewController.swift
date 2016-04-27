@@ -12,13 +12,40 @@ class ImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        view.addSubview(imageView)
+        if image == nil {
+            imageURL = DemoURL.Stanford
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if image == nil {
+            fetchImage()
+        }
+    }
+    
+    var imageURL: NSURL? {
+        didSet {
+            image = nil
+            if view.window != nil {
+                fetchImage()
+            }
+        }
+    }
+    
+    private func fetchImage() {
+        if let url = imageURL {
+            let imageData = NSData(contentsOfURL: url)
+            if imageData == nil {
+                print("image data is nil")
+                image = nil
+            } else {
+                image = UIImage(data: imageData!)
+            }
+        }
     }
     
 
@@ -39,6 +66,7 @@ class ImageViewController: UIViewController {
         }
         set {
             imageView.image = newValue
+            imageView.sizeToFit()
         }
     }
     

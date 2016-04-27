@@ -16,6 +16,7 @@
 		E63ECEB21CB636C5005DE6C8 /* ScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECEB11CB636C5005DE6C8 /* ScrollViewTests.swift */; };
 		E63ECEBD1CB636C5005DE6C8 /* ScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECEBC1CB636C5005DE6C8 /* ScrollViewUITests.swift */; };
 		E6BA54521CD07C1600B8B1CE /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA54511CD07C1600B8B1CE /* ImageViewController.swift */; };
+		E6BA54541CD08A9B00B8B1CE /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA54531CD08A9B00B8B1CE /* DemoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E63ECEBC1CB636C5005DE6C8 /* ScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewUITests.swift; sourceTree = "<group>"; };
 		E63ECEBE1CB636C5005DE6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6BA54511CD07C1600B8B1CE /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		E6BA54531CD08A9B00B8B1CE /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		E63ECE8D1CB636C5005DE6C8 = {
 			isa = PBXGroup;
 			children = (
+				E6BA54531CD08A9B00B8B1CE /* DemoURL.swift */,
 				E63ECE981CB636C5005DE6C8 /* ScrollView */,
 				E63ECEB01CB636C5005DE6C8 /* ScrollViewTests */,
 				E63ECEBB1CB636C5005DE6C8 /* ScrollViewUITests */,
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BA54541CD08A9B00B8B1CE /* DemoURL.swift in Sources */,
 				E63ECE9C1CB636C5005DE6C8 /* ViewController.swift in Sources */,
 				E63ECE9A1CB636C5005DE6C8 /* AppDelegate.swift in Sources */,
 				E6BA54521CD07C1600B8B1CE /* ImageViewController.swift in Sources */,
