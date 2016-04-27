@@ -15,6 +15,7 @@
 		E63ECEA71CB636C5005DE6C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63ECEA51CB636C5005DE6C8 /* LaunchScreen.storyboard */; };
 		E63ECEB21CB636C5005DE6C8 /* ScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECEB11CB636C5005DE6C8 /* ScrollViewTests.swift */; };
 		E63ECEBD1CB636C5005DE6C8 /* ScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECEBC1CB636C5005DE6C8 /* ScrollViewUITests.swift */; };
+		E6BA54521CD07C1600B8B1CE /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA54511CD07C1600B8B1CE /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E63ECEB81CB636C5005DE6C8 /* ScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63ECEBC1CB636C5005DE6C8 /* ScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewUITests.swift; sourceTree = "<group>"; };
 		E63ECEBE1CB636C5005DE6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6BA54511CD07C1600B8B1CE /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,10 @@
 		E63ECE981CB636C5005DE6C8 /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				E63ECE991CB636C5005DE6C8 /* AppDelegate.swift */,
+				E6BA54501CD07B9B00B8B1CE /* SupportingFiles */,
 				E63ECE9B1CB636C5005DE6C8 /* ViewController.swift */,
 				E63ECE9D1CB636C5005DE6C8 /* Main.storyboard */,
-				E63ECEA31CB636C5005DE6C8 /* Assets.xcassets */,
-				E63ECEA51CB636C5005DE6C8 /* LaunchScreen.storyboard */,
-				E63ECEA81CB636C5005DE6C8 /* Info.plist */,
-				E63ECEA01CB636C5005DE6C8 /* ScrollView.xcdatamodeld */,
+				E6BA54511CD07C1600B8B1CE /* ImageViewController.swift */,
 			);
 			path = ScrollView;
 			sourceTree = "<group>";
@@ -126,6 +125,18 @@
 				E63ECEBE1CB636C5005DE6C8 /* Info.plist */,
 			);
 			path = ScrollViewUITests;
+			sourceTree = "<group>";
+		};
+		E6BA54501CD07B9B00B8B1CE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E63ECEA31CB636C5005DE6C8 /* Assets.xcassets */,
+				E63ECEA51CB636C5005DE6C8 /* LaunchScreen.storyboard */,
+				E63ECEA81CB636C5005DE6C8 /* Info.plist */,
+				E63ECEA01CB636C5005DE6C8 /* ScrollView.xcdatamodeld */,
+				E63ECE991CB636C5005DE6C8 /* AppDelegate.swift */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				E63ECE9C1CB636C5005DE6C8 /* ViewController.swift in Sources */,
 				E63ECE9A1CB636C5005DE6C8 /* AppDelegate.swift in Sources */,
+				E6BA54521CD07C1600B8B1CE /* ImageViewController.swift in Sources */,
 				E63ECEA21CB636C5005DE6C8 /* ScrollView.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +503,7 @@
 				E63ECEC31CB636C5005DE6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E63ECEC41CB636C5005DE6C8 /* Build configuration list for PBXNativeTarget "ScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +512,7 @@
 				E63ECEC61CB636C5005DE6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E63ECEC71CB636C5005DE6C8 /* Build configuration list for PBXNativeTarget "ScrollViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +521,7 @@
 				E63ECEC91CB636C5005DE6C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
