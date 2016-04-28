@@ -38,6 +38,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     private func fetchImage() {
         if let url = imageURL {
+            print(url)
             let imageData = NSData(contentsOfURL: url)
             if imageData == nil {
                 print("image data is nil")
