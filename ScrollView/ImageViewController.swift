@@ -17,9 +17,16 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     func fetchImage() {
         if let url = imageURL {
+            spinner?.startAnimating()
             let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
                 let imageData = NSData(contentsOfURL: url)
@@ -41,6 +48,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView?.contentSize = imageView.frame.size
+            spinner?.stopAnimating()
         }
         
         get {

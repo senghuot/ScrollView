@@ -17,24 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-IF-iSl">
-                                <rect key="frame" x="162" y="247" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-IF-iSl">
+                                <rect key="frame" x="251" y="242" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Earth"/>
                                 <connections>
                                     <segue destination="m1O-w0-HEI" kind="showDetail" identifier="Earth" id="9C1-fd-csi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cye-rb-pNg">
-                                <rect key="frame" x="162" y="280" width="99" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cye-rb-pNg">
+                                <rect key="frame" x="251" y="280" width="99" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="UaX-Hb-XLK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Cassini"/>
                                 <connections>
                                     <segue destination="m1O-w0-HEI" kind="showDetail" identifier="Cassini" id="gj3-v6-iEz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-8I-A3B">
-                                <rect key="frame" x="162" y="318" width="99" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-8I-A3B">
+                                <rect key="frame" x="251" y="327" width="99" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Saturn"/>
                                 <connections>
@@ -43,6 +46,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NOe-8I-A3B" firstAttribute="top" secondItem="Cye-rb-pNg" secondAttribute="bottom" constant="8" symbolic="YES" id="QKz-M7-nuz"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W0K-7a-QMQ"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="trailing" secondItem="NOe-8I-A3B" secondAttribute="trailing" id="WJD-hK-RRG"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="top" secondItem="VhV-IF-iSl" secondAttribute="bottom" constant="8" symbolic="YES" id="YxM-5e-JKx"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8q-pL-edI"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="trailing" secondItem="VhV-IF-iSl" secondAttribute="trailing" id="mI9-2f-cli"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="leading" secondItem="NOe-8I-A3B" secondAttribute="leading" id="n0B-1L-uFf"/>
+                            <constraint firstItem="Cye-rb-pNg" firstAttribute="leading" secondItem="VhV-IF-iSl" secondAttribute="leading" id="snr-zR-Mhl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OcW-26-OJn"/>
                 </viewController>
@@ -62,13 +75,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pqJ-Qm-cL9">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3M-of-d1G">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pqJ-Qm-cL9" firstAttribute="centerY" secondItem="OXh-dg-uGU" secondAttribute="centerY" id="9c5-KL-mHq"/>
                             <constraint firstItem="n3M-of-d1G" firstAttribute="leading" secondItem="OXh-dg-uGU" secondAttribute="leading" id="PM4-Ts-Rys"/>
+                            <constraint firstItem="pqJ-Qm-cL9" firstAttribute="centerX" secondItem="OXh-dg-uGU" secondAttribute="centerX" id="bHE-Cd-UtX"/>
                             <constraint firstItem="n3M-of-d1G" firstAttribute="bottom" secondItem="ya5-rE-C7F" secondAttribute="top" id="lP9-gH-qIk"/>
                             <constraint firstItem="n3M-of-d1G" firstAttribute="top" secondItem="OXh-dg-uGU" secondAttribute="top" id="ruw-tl-gDi"/>
                             <constraint firstAttribute="trailing" secondItem="n3M-of-d1G" secondAttribute="trailing" id="x1w-ps-Vwi"/>
@@ -76,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="n3M-of-d1G" id="qMK-oE-DqB"/>
+                        <outlet property="spinner" destination="pqJ-Qm-cL9" id="gdf-2Q-VJ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOj-5r-TL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,6 +132,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Yr-o1-pr5"/>
+        <segue reference="gj3-v6-iEz"/>
     </inferredMetricsTieBreakers>
 </document>
