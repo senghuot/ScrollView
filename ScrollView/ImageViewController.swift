@@ -9,72 +9,6 @@
 import UIKit
 
 class ImageViewController: UIViewController, UIScrollViewDelegate {
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//        scrollView.addSubview(imageView)
-//        if image == nil {
-//            fetchImage()
-//        }
-//    }
-//    
-//    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if image == nil {
-//            fetchImage()
-//        }
-//    }
-//    
-//    var imageURL: NSURL? {
-//        didSet {
-//            image = nil
-//            if view.window != nil {
-//                fetchImage()
-//            }
-//        }
-//    }
-//    
-//    private func fetchImage() {
-//        if let url = imageURL {
-//            print(url)
-//            let imageData = NSData(contentsOfURL: url)
-//            if imageData == nil {
-//                print("image data is nil")
-//                image = nil
-//            } else {
-//                image = UIImage(data: imageData!)
-//            }
-//        }
-//    }
-//    
-//    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-//        return imageView
-//    }
-//    
-//    @IBOutlet weak var scrollView: UIScrollView! {
-//        didSet {
-//            scrollView.contentSize = imageView.frame.size
-//            scrollView.delegate = self
-//            scrollView.minimumZoomScale = 0.01
-//            scrollView.maximumZoomScale = 1.0
-//        }
-//    }
-//    
-//    
-//    private var imageView = UIImageView()
-//    private var image: UIImage? {
-//        get {
-//            return imageView.image
-//        }
-//        set {
-//            imageView.image = newValue
-//            imageView.sizeToFit()
-//            scrollView?.contentSize = imageView.frame.size
-//        }
-//    }
-    
     
     var imageURL: NSURL? {
         didSet {
@@ -83,13 +17,19 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
     func fetchImage() {
         if let url = imageURL {
-            let imageData = NSData(contentsOfURL: url)
-            if imageData != nil {
-                image = UIImage(data: imageData!)
-            } else {
-                image = nil
+            let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
+            dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
+                let imageData = NSData(contentsOfURL: url)
+                dispatch_async(dispatch_get_main_queue()){
+                    if url == self.imageURL && imageData != nil {
+                        self.image = UIImage(data: imageData!)
+                    } else {
+                        self.image = nil
+                    }
+                }
             }
         }
     }
