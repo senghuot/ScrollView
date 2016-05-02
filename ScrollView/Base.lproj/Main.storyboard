@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-IF-iSl">
-                                <rect key="frame" x="251" y="242" width="99" height="30"/>
+                                <rect key="frame" x="251" y="237" width="99" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Earth"/>
+                                <state key="normal" title="EARTH"/>
                                 <connections>
                                     <segue destination="m1O-w0-HEI" kind="showDetail" identifier="Earth" id="9C1-fd-csi"/>
                                 </connections>
@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="99" id="UaX-Hb-XLK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Cassini"/>
+                                <state key="normal" title="CASSINI"/>
                                 <connections>
                                     <segue destination="m1O-w0-HEI" kind="showDetail" identifier="Cassini" id="gj3-v6-iEz"/>
                                 </connections>
@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-8I-A3B">
                                 <rect key="frame" x="251" y="327" width="99" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Saturn"/>
+                                <state key="normal" title="SATURN"/>
                                 <connections>
                                     <segue destination="m1O-w0-HEI" kind="showDetail" identifier="Saturn" id="WP7-i8-SuG"/>
                                 </connections>
